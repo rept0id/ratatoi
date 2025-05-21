@@ -32,7 +32,7 @@ int ratatoi(const char *a) {
         fprintf(
             stderr,
 
-            "badatoi : error : couldn't parse '%s' (aborting).\n",
+            "ratatoi : error : couldn't parse '%s' (aborting).\n",
 
             a
         );
@@ -47,7 +47,7 @@ int ratatoi(const char *a) {
         fprintf(
             stderr,
 
-            "badatoi : error : couldn't parse all of '%s', garbage : '%s' (aborting).\n",
+            "ratatoi : error : couldn't parse all of '%s', garbage : '%s' (aborting).\n",
 
             a,
             strtolEndptr
@@ -63,7 +63,7 @@ int ratatoi(const char *a) {
         fprintf(
             stderr,
 
-            "badatoi : error : long overflow/underflow on '%s' (aborting).\n",
+            "ratatoi : error : long overflow/underflow on '%s' (aborting).\n",
 
             a
         );
@@ -78,7 +78,7 @@ int ratatoi(const char *a) {
         fprintf(
             stderr,
 
-            "badatoi: errno %d (%s) on '%s' (aborting).\n",
+            "ratatoi: errno %d (%s) on '%s' (aborting).\n",
 
             errno,
             strerror(errno),
@@ -96,7 +96,7 @@ int ratatoi(const char *a) {
         fprintf(
             stderr,
 
-            "badatoi : error : int overflow/underflow on '%s' (aborting).\n",
+            "ratatoi : error : int overflow/underflow on '%s' (aborting).\n",
 
             a
         );
