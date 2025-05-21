@@ -11,7 +11,7 @@
 
 /*** * * ***/
 
-int ratatoi(const char *a) {
+int ratatoi(const char *aString) {
     errno = 0;
 
     char *strtolEndptr;
@@ -21,20 +21,20 @@ int ratatoi(const char *a) {
 
     /*** * * ***/
 
-    aLong = strtol(a, &strtolEndptr, 10);
+    aLong = strtol(aString, &strtolEndptr, 10);
 
     /*** * * ***/
 
     // checks
 
     // checks : no digits parsed
-    if (strtolEndptr == a) {
+    if (strtolEndptr == aString) {
         fprintf(
             stderr,
 
             "ratatoi : error : couldn't parse '%s' (aborting).\n",
 
-            a
+            aString
         );
 
         /*** * * ***/
@@ -49,7 +49,7 @@ int ratatoi(const char *a) {
 
             "ratatoi : error : couldn't parse all of '%s', garbage : '%s' (aborting).\n",
 
-            a,
+            aString,
             strtolEndptr
         );
 
@@ -65,7 +65,7 @@ int ratatoi(const char *a) {
 
             "ratatoi : error : long overflow/underflow on '%s' (aborting).\n",
 
-            a
+            aString
         );
 
         /*** * * ***/
@@ -82,7 +82,7 @@ int ratatoi(const char *a) {
 
             errno,
             strerror(errno),
-            a
+            aString
         );
 
         /*** * * ***/
@@ -98,7 +98,7 @@ int ratatoi(const char *a) {
 
             "ratatoi : error : int overflow/underflow on '%s' (aborting).\n",
 
-            a
+            aString
         );
 
         /*** * * ***/
