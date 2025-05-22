@@ -14,6 +14,8 @@
 int ratatoi(const char *aString) {
     errno = 0;
 
+    /*** * * ***/
+
     char *strtolEndptr;
 
     long aLong;
